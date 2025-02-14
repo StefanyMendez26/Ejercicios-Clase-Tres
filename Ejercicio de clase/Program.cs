@@ -163,9 +163,7 @@ void MostrarMenu(double Menu)
 }
 
 
-
-
-
+         
 
 
 //Estructura de iteracion
@@ -213,18 +211,42 @@ for (int k = 0; i < 3; i++)
         // Funciones 
          string GetName(int ID )
         {
-            if (ID < names.Length)
-               return names[ID];
+            if (ID < nombre.Length)
+               return nombre.[ID];
        else 
           return String.Empty;
         }
 string[] names = { "Spencer", "Sally", "Doug"};
 
 
+        //Control de excepciones
+
+      
+    static void Main()
+    {
+        try
+        {
+            Console.Write("Ingrese un número: ");
+            int numero = Convert.ToInt32(Console.ReadLine());
+            int resultado = 10 / numero;
+            Console.WriteLine($"El resultado es: {resultado}");
+        }
+        catch (DivideByZeroException)
+        {
+            Console.WriteLine("Error: No se puede dividir por cero.");
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Error: Debe ingresar un número válido.");
+        }
+        finally
+        {
+            Console.WriteLine("Operación finalizada.");
+        }
+    }
+}
 
 
-
-        Console.WriteLine("Hello, World!");
+Console.WriteLine("Hello, World!");
     }
 
-}
