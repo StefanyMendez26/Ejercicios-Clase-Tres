@@ -133,10 +133,10 @@ DisplayMeasurement(5); // Output: Measured value 1s 5.
 DisplayMeasurement(30); // Output: Measured value As 30; too high.
 DisplayMeasurement(double.NaN); // Output: Falled measuresent.
 
-vold DisplayMeasurement(double measurenent)
+void MostrarMenu(double Menu)
 {
 
-    switch (measurement)
+    switch (Menu)
     {
 
 
